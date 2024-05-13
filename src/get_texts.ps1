@@ -8,14 +8,14 @@ $date = Get-Date
 while ($Date.DayOfWeek -ne "Sunday") {$date = $date.AddDays(1)}
 $date = $date.ToString("dd-MM")
 
-# uncomment the following line if you want to overwrite
+# descomente a linha seguinte se você quer selecionar uma data específica
 #$date = "13-05"
 
-# constants
+# constantes
 $finalUrl = $baseUrl + $date
 $response = Invoke-RestMethod -uri $finalUrl
 
-# write to file
+# escreve nos arquivos de texto
 $files_path = ".\texts\"
 
 # PRIMEIRA LEITURA
